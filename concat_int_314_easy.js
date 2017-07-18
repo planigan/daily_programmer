@@ -1,5 +1,4 @@
-const sortIntArray = arrIn => {
-  let arr = [...arrIn]
+const sortIntArray = arr => {
   return arr.sort((intA,intB) => {
     const a = String(intA)
     const b = String(intB)
