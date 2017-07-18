@@ -1,0 +1,16 @@
+{
+  "name": "daily_programmer",
+  "version": "1.0.0",
+  "description": "Coding challenge answers",
+  "main": "concat_int_314_easy.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tap-prettify 'tests/**/*.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tap-prettify": "0.0.2",
+    "tape": "^4.7.0",
+    "tape-watch": "^2.3.0"
+  }
+}
