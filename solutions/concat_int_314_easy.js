@@ -1,7 +1,5 @@
 const sortIntArray = arr => {
-  return arr.sort((intA,intB) => {
-    const a = String(intA)
-    const b = String(intB)
+  return arr.sort((a,b) => {
     return parseInt(a+b) - parseInt(b+a)
   })
 }
