@@ -1,5 +1,5 @@
 const test = require("tape");
-const concat = require('../concat_int_314_easy')
+const concat = require('../solutions/concat_int_314_easy')
 
 test("concat int should return correct values", function(t) {
   t.plan(3);
