@@ -22,10 +22,9 @@ My [solutions](https://github.com/planigan/daily_programmer/tree/master/solution
 ├── package.json
 ├── package-lock.json
 ├── README.header.md
-├── README.md
-└── README.test.md
+└── README.md
 
-4 directories, 16 files
+4 directories, 15 files
 ```
 ## Latest `npm test`
 ```
