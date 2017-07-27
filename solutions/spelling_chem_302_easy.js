@@ -5,7 +5,7 @@ const getSymbolWord = inputWord => {
   const getSymbolFromStr = (str, numChars) => capitalize(str.slice(0, numChars))
   const results = []
 
-  const handleBeginning = (word, symbols, elements, sumWeights) => {
+  const processSymbols = (word, symbols, elements, sumWeights) => {
     if (word.length === 0) return results.push({
       result: `${symbols} (${elements.join(', ').toLowerCase()})`,
       sumWeights
@@ -14,15 +14,15 @@ const getSymbolWord = inputWord => {
           [getSymbolFromStr(word,1), getSymbolFromStr(word,2)]
     const [oneCharElement, twoCharElement] =
           [ELEMENTS[ oneCharSymbol ], ELEMENTS[ twoCharSymbol ]]
-    twoCharElement && word.length >= 2 &&
-      handleBeginning(
+    twoCharElement &&
+      processSymbols(
         word.slice(2),
         symbols + twoCharSymbol,
         elements.concat(twoCharElement.name),
         sumWeights + twoCharElement.weight
       )
-    oneCharElement && word.length >= 1 &&
-      handleBeginning(
+    oneCharElement &&
+      processSymbols(
         word.slice(1),
         symbols + oneCharSymbol,
         elements.concat(oneCharElement.name),
@@ -30,7 +30,7 @@ const getSymbolWord = inputWord => {
       )
   }
 
-  handleBeginning(inputWord, '', [], 0)
+  processSymbols(inputWord, '', [], 0)
   return results.length > 0
     ? results.sort((a,b) => b.sumWeights - a.sumWeights)[0].result
     : "Cannot be spelled"
