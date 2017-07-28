@@ -13,10 +13,14 @@ My [solutions](https://github.com/planigan/daily_programmer/tree/master/solution
 │   ├── jolly_jumper_311_easy.md
 │   └── spelling_chem_302_easy.md
 ├── solutions
+│   ├── 3sum_323_easy_naive.js
+│   ├── 3sum_323_easy_quadratic.js
 │   ├── concat_int_314_easy.js
 │   ├── jolly_jumper_311_easy.js
 │   └── spelling_chem_302_easy.js
 ├── tests
+│   ├── 3sum_323_easy_naive.test.js
+│   ├── 3sum_323_easy_quadratic.test.js
 │   ├── concat_int_314_easy.test.js
 │   ├── jolly_jumper_311_easy.test.js
 │   └── spelling_chem_302_easy.test.js
@@ -25,14 +29,38 @@ My [solutions](https://github.com/planigan/daily_programmer/tree/master/solution
 ├── README.header.md
 └── README.md
 
-4 directories, 16 files
+4 directories, 20 files
 ```
 ## Latest `npm run test-spec`
 ```
 
 > daily_programmer@1.0.0 test-spec /home/patrick/Documents/Code/daily_programmer
-> tape 'tests/**/*.js' | tap-spec
+> tape 'tests/**/*test.js' | tap-spec
 
+
+  323 Easy: 3sum naive should return correct values
+
+    Input: 4 5 -1 -2 -7 2 -5 -3 -7 -3 1
+    Output: -7 2 5 | -5 1 4 | -3 -2 5 | -3 -1 4 | -3 1 2
+    ✔ Should be: -7 2 5 | -5 1 4 | -3 -2 5 | -3 -1 4 | -3 1 2
+    Input: -1 -6 -3 -7 5 -8 2 -8 1
+    Output: -7 2 5 | -6 1 5 | -3 1 2
+    ✔ Should be: -7 2 5 | -6 1 5 | -3 1 2
+    Input: -5 -1 -4 2 9 -9 -6 -1 -7
+    Output: -5 -4 9 | -1 -1 2
+    ✔ Should be: -5 -4 9 | -1 -1 2
+
+  323 Easy: 3sum quadratic should return correct values
+
+    Input: 4 5 -1 -2 -7 2 -5 -3 -7 -3 1
+    Output: -7 2 5 | -5 1 4 | -3 -2 5 | -3 -1 4 | -3 1 2
+    ✔ Should be: -7 2 5 | -5 1 4 | -3 -2 5 | -3 -1 4 | -3 1 2
+    Input: -1 -6 -3 -7 5 -8 2 -8 1
+    Output: -7 2 5 | -6 1 5 | -3 1 2
+    ✔ Should be: -7 2 5 | -6 1 5 | -3 1 2
+    Input: -5 -1 -4 2 9 -9 -6 -1 -7
+    Output: -5 -4 9 | -1 -1 2
+    ✔ Should be: -5 -4 9 | -1 -1 2
 
   314 Easy: concat int should return correct values
 
@@ -86,8 +114,8 @@ My [solutions](https://github.com/planigan/daily_programmer/tree/master/solution
     ✔ Should be: Cannot be spelled
 
 
-  total:     14
-  passing:   14
+  total:     20
+  passing:   20
   duration:  12ms
 
 
