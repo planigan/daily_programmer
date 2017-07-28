@@ -5,15 +5,18 @@
   "main": "concat_int_314_easy.js",
   "scripts": {
     "test": "tap-prettify 'tests/**/*.js'",
-    "test-watch": "nodemon -q -x 'npm test'",
-    "build-readme": "cat README.header.md > README.md && tree -I '.git|node_modules' --dirsfirst >> README.md && echo '```\n## Latest `npm test`\n```' >> README.md && npm test | strip_colors >> README.md && echo '```' >> README.md"
+    "test-spec": "tape 'tests/**/*.js' | tap-spec",
+    "test-watch": "nodemon -q -x 'npm run test-spec'",
+    "build-readme": "cat README.header.md > README.md && tree -I '.git|node_modules' --dirsfirst >> README.md && echo '```\n## Latest `npm run test-spec`\n```' >> README.md && npm run test-spec | strip_colors >> README.md && echo '```' >> README.md"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "csvtojson": "^1.1.7",
     "nodemon": "^1.11.0",
+    "tap-diff": "^0.1.1",
     "tap-prettify": "0.0.2",
+    "tap-spec": "^4.1.1",
     "tape": "^4.7.0"
   }
 }
