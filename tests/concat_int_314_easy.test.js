@@ -11,6 +11,6 @@ test("314 Easy: concat int should return correct values", function(t) {
     const output = lib.getOutput(input)
     console.log('Input:', input)
     console.log('Output:', output)
-    t.equal(output, expectedOutput)
+    t.equal(output, expectedOutput, `Should be: ${ expectedOutput }`)
   })
 })
