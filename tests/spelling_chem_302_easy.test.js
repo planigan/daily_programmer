@@ -14,8 +14,8 @@ test("302 Easy: spelling chem should return correct values", function(t) {
     ["noanswer","Cannot be spelled"]
   ].forEach(testCase => {
     const ret = concat.getOutput(testCase[0])
-    console.log(testCase[0])
-    console.log(ret)
+    console.log('Input:', testCase[0])
+    console.log('Output:', ret)
     t.equal(ret, testCase[1])
   })
 })
