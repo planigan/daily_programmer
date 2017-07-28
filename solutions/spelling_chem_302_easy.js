@@ -36,11 +36,11 @@ const getSymbolWord = inputWord => {
     : "Cannot be spelled"
 }
 
-console.log(getSymbolWord('noanswer'))
-console.log(getSymbolWord('poison'))
-console.log(getSymbolWord('bacon'))
-console.log(getSymbolWord('functions'))
-console.log(getSymbolWord('sickness'))
-console.log(getSymbolWord('ticklish'))
+// console.log(getSymbolWord('noanswer'))
+// console.log(getSymbolWord('poison'))
+// console.log(getSymbolWord('bacon'))
+// console.log(getSymbolWord('functions'))
+// console.log(getSymbolWord('sickness'))
+// console.log(getSymbolWord('ticklish'))
 
 exports.getOutput = word => getSymbolWord(word)
