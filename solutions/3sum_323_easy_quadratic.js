@@ -12,12 +12,16 @@ function threeSum(nums) {
       let kNum = numbers[end]
       const sum = iNum + jNum + kNum
       const str = `${iNum} ${jNum} ${kNum} | `
-      if (sum === 0)
-        results += str
-      else if (sum > 0)
+      if (sum === 0) {
+        if (results.indexOf(str) === -1) {
+          results += str
+        }
         end--
-      else
+      } else if (sum > 0) {
+        end--
+      } else {
         start++
+      }
     }
   }
 
