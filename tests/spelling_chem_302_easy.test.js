@@ -9,8 +9,8 @@ test("302 Easy: spelling chem should return correct values", function(t) {
     ["bacon","BAcON (boron, actinium, oxygen, nitrogen)"],
     ["functions",
      "FUNCTiONS (fluorine, uranium, nitrogen, carbon, titanium, oxygen, nitrogen, sulfur)"],
-	  ["sickness","SICKNEsS (sulfur, iodine, carbon, potassium, nitrogen, einsteinium, sulfur)"],
-		["ticklish","TiCKLiSH (titanium, carbon, potassium, lithium, sulfur, hydrogen)"],
+    ["sickness","SICKNEsS (sulfur, iodine, carbon, potassium, nitrogen, einsteinium, sulfur)"],
+    ["ticklish","TiCKLiSH (titanium, carbon, potassium, lithium, sulfur, hydrogen)"],
     ["noanswer","Cannot be spelled"]
   ].forEach(([input,expectedOutput]) => {
     const output = lib.getOutput(input)
